@@ -1,7 +1,6 @@
 import requests
 import re
 import argparse
-import os
 
 def parserss():
     parser = argparse.ArgumentParser(prog='csrfBruteforce.py',description='Anti-CSRF token Bruteforce')
@@ -42,7 +41,7 @@ if __name__ == '__main__':
 
     options = parserss()
     target_url = options.targeturl
-    wordlist = os.path.abspath(options.wordlist)
+    wordlist = options.wordlist
     username = options.username
 
     if wordlist == None:
